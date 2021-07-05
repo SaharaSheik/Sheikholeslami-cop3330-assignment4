@@ -1,0 +1,57 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class ToDoList{
+    main()
+    start()
+}
+
+class ToDoList_Controller {
+ +addANewList(ActionEvent actionEvent) : void
+ +getNameofToDoList(ActionEvent actionEvent) : void;
+ + SortList(MouseEvent mouseEvent): void
+ + CreateNewList(ActionEvent actionEvent) : toDo
+ + newpage(ActionEvent actionEvent) : void
+ +openWindowforSelectedList(MouseEvent mouseEvent): void
+ + EditNameofSelectedToDoList(ActionEvent actionEvent): void
+ +DisplayDropDown(ActionEvent actionEvent): void
+ +SelectDueDate(ActionEvent actionEvent): Date
+ + AddNewItemToList(MouseEvent mouseEvent): item
+ + removeList(ActionEvent actionEvent): void
+ + itemCompleted(ActionEvent actionEvent): boolean
+ + removeItemFromList: boolean
+ + void EditItemName(String): void
+ + saveList(ActionEvent actionEvent) : boolean
+
+
+}
+
+class toDo{
+
+ +String listName;
+ +List<items> itemList;
+
+ +getName(): String
+ +setName(String): void
+ +editName(String): void
+ +addItem (item): void;
+
+}
+
+class item {
+    +String itemDescription;
+    +Date dueDate;
+    +boolean itemDone = false;
+
+    +setName(String): void
+    +modifyName(String): void
+    +changeDueDate(Date): void
+    +markAsCompletes(boolean): void
+
+
+}
+javafx.Application <|-- ToDoList
+ToDoList - ToDoList_Controller
+ToDoList_Controller - toDo
+toDo -- item
+@enduml
