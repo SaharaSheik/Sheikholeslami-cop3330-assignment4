@@ -14,17 +14,9 @@ class EditItemPageController {
 
 }
 
-class DisplayAllController {
-+loadCompleteList(ActionEvent actionEvent) : void
-}
-
 class DisplayCompletedController {
 
 +loadCompletedList(ActionEvent actionEvent)
-}
-
-class DisplayIncompletedListController {
-+loadIncompleteList(ActionEvent actionEvent): void
 }
 
 class Item{
@@ -38,6 +30,17 @@ class Item{
  + setDueDate(Date dueDate) : void
  + setItemDone(Boolean itemDone): void
 
+
+}
+
+
+class DisplayAllController {
++loadCompleteList(ActionEvent actionEvent) : void
+}
+
+
+class DisplayIncompletedListController {
++loadIncompleteList(ActionEvent actionEvent): void
 }
 
 class ToDo {
@@ -55,6 +58,7 @@ class ToDoListController {
 + getNameOfToDoList(ActionEvent actionEvent) : void
 + toDoListNewPage(ActionEvent actionEvent) : void
 +  void addNewToDoList(ActionEvent actionEvent) : void
++ ToDo AddToDo (): ToDo
 }
 
 class ToDoListPageController {

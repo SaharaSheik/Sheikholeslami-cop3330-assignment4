@@ -31,7 +31,6 @@ public class ToDoListController {
     }
 
 
-
     @FXML
     public void toDoListNewPage(ActionEvent actionEvent) throws IOException {
 
@@ -64,12 +63,14 @@ public class ToDoListController {
 
     }
 
-    public void AddToDo (){
+    public ToDo AddToDo (){
+
+        ToDo newToDo =new ToDo();
         // this function will append each added to do so a list of to dos can be displayed
         //create a to do DIV  const ToDODiv -> create an element "div"
         // add  each to do to the class -> ToDoDiv.classList.add("ToDo")
         // To Do Div . append a child (new To Do)
-
+      return newToDo;
     }
 
 
@@ -77,10 +78,15 @@ public class ToDoListController {
 
     public void saveAllLists(ActionEvent actionEvent) {
 
-
-
-
+        // check if we have anything in the saved list or not
+        //if we have the list in local storage create an empty ToDO list
+        // if (localStorage.getItem(ToDO) == NULL -> create a ToDo List
+        // else get the ToDos from JSON.Parse.LocalStorage.getitem(ToDo)
+        // after wards ToDo.push(todo)
+        //afterwards push it back to the Json Storage -> localStorage.setItem(TODO, Json.Stringfy(TODO)
     }
+
+
 
     public void viewList(ActionEvent actionEvent) {
         //const ToDoInput == queryselector from our To Do input
