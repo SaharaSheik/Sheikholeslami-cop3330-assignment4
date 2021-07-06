@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Sahar Sheikholeslami
+ */
+
 package ucf.assignments;
 
 import javafx.event.ActionEvent;
@@ -14,14 +19,24 @@ import java.io.IOException;
 
 public class ToDoListController {
     public void getNameOfToDoList(ActionEvent actionEvent) {
+
+
+
+        //this method will receive the new toDoListName desc from text filed in ToDoList GUI
+         //and sets the new desc for the ToDol
+        // String newDesc = current value in itemDescription field in in toDolist GUI
+         //if newDesc != ""
+         // To Do Desc == new Desc
+
     }
 
-    public void ModifyNameOfToDoList(ActionEvent actionEvent) {
-    }
 
 
     @FXML
     public void toDoListNewPage(ActionEvent actionEvent) throws IOException {
+
+        // this method opens a new page to modify, save, load,... and do different operations on each
+        //individual to do list
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ToDoListPage.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -38,18 +53,44 @@ public class ToDoListController {
 
     public void addNewToDoList(ActionEvent actionEvent) {
 
-    /*
-         String toDoDesc = current value in getNameOfToDoList field
-         if toDoDesc != ""
-         instantiate a To Do Object   -> ToDo list = new ToDo
-         Use setter in To Do class to set the
-         itemDescription textfield = newDesc
-        */
+        // this method will create a new To Do Object
+         //String toDoDesc = current value in getNameOfToDoList field
+         //if toDoDesc != ""
+        // instantiate a To Do Object   -> To Do list = new To Do
+        // Use setter in To Do class to set the
+        // list.setToDoDescription(newDesc)
+        // <input type ="text" class="ToDo>
+
+
+    }
+
+    public void AddToDo (){
+        // this function will append each added to do so a list of to dos can be displayed
+        //create a to do DIV  const ToDODiv -> create an element "div"
+        // add  each to do to the class -> ToDoDiv.classList.add("ToDo")
+        // To Do Div . append a child (new To Do)
+
     }
 
 
     @FXML
 
     public void saveAllLists(ActionEvent actionEvent) {
+
+
+
+
+    }
+
+    public void viewList(ActionEvent actionEvent) {
+        //const ToDoInput == queryselector from our To Do input
+        // const todoAddButton == queryselector from the add button on ToDoList Controller
+        // const todoList == append each to do we create to next one for viewing -> queryselector ToDoList
+        // create a div class ToDo-containter
+        // use ul class pass array of ToDolist on to it
+        // the container will have some li so that each to do list will have the button
+        // to open to the new page
+
+
     }
 }

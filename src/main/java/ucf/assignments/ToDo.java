@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Sahar Sheikholeslami
+ */
+
 package ucf.assignments;
 
 import java.util.ArrayList;
@@ -25,7 +30,7 @@ public class ToDo {
 
         // will use this function to do two things:
         //a) sort the item list by due date.  Will use collection sort and a custom comprator
-        //b)
+        //b) save and display the lists when prompted by the uses
         return itemList;
     }
 
